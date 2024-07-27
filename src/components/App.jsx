@@ -6,7 +6,7 @@ import Form from "./Form";
 function App() {
   const [notes, setNotes] = useState([]);
 
-  // save functionality is to be added in App.jsx only
+  // save functionality is to be added in App.jsx
   function saveNote(newnote) {
     setNotes((prevNotes) => {
       return [...prevNotes, newnote];

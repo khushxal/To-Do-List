@@ -16,7 +16,9 @@ function NoteForm(props) {
 
   // calling the method which call the save method from App.jsx
   function handleSubmit(event) {
-    props.onAdd(note);
+    if (note.title && note.content) {
+      props.onAdd(note);
+    }
     setNote({ title: "", content: "" });
     event.preventDefault();
   }

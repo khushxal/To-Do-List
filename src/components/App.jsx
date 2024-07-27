@@ -28,10 +28,13 @@ function App() {
       <Form onAdd={saveNote} />
       {notes.map((notesItem, index) => (
         <Note
+          key={index}
           id={index}
           title={notesItem.title}
           content={notesItem.content}
-          onDelete={deleteNote}
+          onDelete={() => {
+            deleteNote(index);
+          }}
         />
       ))}
       <Footer />
